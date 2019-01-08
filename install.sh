@@ -47,6 +47,8 @@ cd /openvpn-node
 
 removeGitFiles
 
+npm install
+
 # Edit config files
 echo Edit config files
 
