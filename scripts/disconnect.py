@@ -7,14 +7,12 @@ import logging
 import requests
 import config
 
-username = os.environ.get("username")
-ip = os.environ.get("untrusted_ip")
-port = os.environ.get("untrusted_port")
+user_text_id = os.environ.get("common_name")
+ip = os.environ.get("trusted_ip")
 
 data = {
-	"username": username,
+	"user_text_id": user_text_id,
 	"ip": ip,
-	"port": port,
 }
 
 try:
