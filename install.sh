@@ -34,6 +34,8 @@ cd /openvpn-install
 
 cp -R scripts /etc/openvpn/scripts
 
+chmod -R +x /etc/openvpn/scripts
+
 # Install OpenVPN node
 echo Install OpenVPN node
 
@@ -44,6 +46,27 @@ git clone https://github.com/Arseniys1/openvpn-node
 cd /openvpn-node
 
 removeGitFiles
+
+# Edit config files
+echo Edit config files
+
+nano /etc/openvpn/scripts/config.py
+
+nano /openvpn-node/config.js
+
+# Copy openvpn-install.sh to /
+echo Copy openvpn-install.sh to /
+
+cd /openvpn-install
+
+cp openvpn-install.sh /openvpn-install.sh
+
+# Delete openvpn-install folder
+echo Delete openvpn-install folder
+
+cd /
+
+rm -rf openvpn-install
 
 echo Install finish
 
