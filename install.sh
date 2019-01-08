@@ -54,6 +54,17 @@ nano /etc/openvpn/scripts/config.py
 
 nano /openvpn-node/config.js
 
+# Start OpenVPN and OpenVPN node
+echo Start OpenVPN and OpenVPN node
+
+service openvpn stop
+
+service openvpn start
+
+cd /openvpn-node
+
+nohup node echo.js > /dev/null & echo $!
+
 # Copy openvpn-install.sh to /
 echo Copy openvpn-install.sh to /
 
