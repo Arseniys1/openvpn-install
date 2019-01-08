@@ -673,7 +673,9 @@ function installOpenVPN () {
 		echo "proto ${PROTOCOL}6" >> /etc/openvpn/server.conf
 	fi
 
-	echo "dev tun
+	echo "client-connect scripts/connect.py
+client-disconnect scripts/disconnect.py
+dev tun
 user nobody
 group $NOGROUP
 persist-key
